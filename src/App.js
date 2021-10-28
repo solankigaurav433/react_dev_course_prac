@@ -1,25 +1,11 @@
 import React from "react";
-import "./App.css";
-import FetchHook from "./FetchHook";
-import {Routes, Route} from "react-router-dom";
-import {Home} from './Home';
-import { Contact, Location, Services} from './pages';
+import {BiArchive} from "react-icons/bi";
 
-export default function App() {
+function App() {
   return (
-    <div className="App">
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-
-        <Route path="/about" element={<FetchHook/>}>
-        <Route path="location" element={<Location/>}/>
-        <Route path="services" element={<Services/>}/>  
-          </Route>
-        <Route path="/contact" element={<Contact/>}/>
-        
-
-      </Routes>
-    
+    <div className="App container mx-auto mt-3 font-thin">
+      <h1 className="text-5xl"><BiArchive className="inline-block text-red-500 align-top"/> Your appointments</h1>
     </div>
   );
 }
+export default App;
